@@ -1,0 +1,13 @@
+.radio {
+  display: flex;
+  justify-content: space-around;
+}
+.sub-radio {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.submit-input {
+  margin-top: 30px;
+}

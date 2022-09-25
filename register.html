@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="icon" type="image/x-icon" href="/image/groceries.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/register.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="header">
+        <h1>Register</h1>
+      </div>
+      <div id="content">
+        <form action="login.html" method="get">
+          <fieldset style="border-radius: 10px; border-width: 3px">
+            <legend style="text-align: left; margin-left: 10px">
+              <b><i>Register</i></b>
+            </legend>
+
+            <div class="input">
+              <label for="name"
+                ><b>Name</b> : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label
+              >
+              <input type="text" name="name" id="name" placeholder="Name" />
+            </div>
+
+            <div class="input">
+              <label for="email"
+                ><b>Email</b> : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label
+              >
+              <input type="email" name="email" id="email" placeholder="Email" />
+            </div>
+
+            <div class="input">
+              <label for="password"><b>Password</b> : </label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Password"
+              />
+            </div>
+
+            <div class="input">
+              <label for="phone"><b>Phone</b> : &nbsp;&nbsp;&nbsp;&nbsp;</label>
+              <input type="text" name="phone" id="phone" placeholder="Phone" />
+            </div>
+            <div class="radio">
+              <label for="gender"
+                ><b>Gender</b> : &nbsp;&nbsp;&nbsp;&nbsp;</label
+              >
+              <div class="sub-radio">
+                <div>
+                  <label for="male">Male</label>
+                  <input type="radio" name="gender" id="male" value="male" />
+                </div>
+
+                <div>
+                  <label for="female">Female</label>
+                  <input
+                    type="radio"
+                    name="gender"
+                    id="female"
+                    value="female"
+                  />
+                </div>
+                <div>
+                  <label for="other">Other</label>
+                  <input type="radio" name="gender" id="other" value="other" />
+                </div>
+              </div>
+            </div>
+            <div class="submit-input">
+              <input type="submit" value="Register" />
+              <a href="login.html"
+                ><button type="button">&leftarrow; login</button></a
+              >
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+body {
+  color: white;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#header {
+  text-align: center;
+}
+
+#content {
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  width: 500px;
+  height: 500px;
+}
+
+.input {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 0px;
+}
+
+.input input {
+  width: 240px;
+  height: 24px;
+  border-radius: 5px;
+  outline: none;
+  padding: 0px 4px;
+}
+
+.submit-input input {
+  width: 80px;
+  height: 28px;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  position: relative;
+  left: 370px;
+  border-radius: 8px;
+  opacity: 1;
+  transition: all;
+
+  animation: btn 1.5s ease;
+}
+.submit-input input:hover {
+  background-color: #1077b6;
+  color: white;
+  border-color: white;
+}
+
+.submit-input button {
+  width: 80px;
+  height: 28px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 8px;
+  opacity: 1;
+  animation: reg 1.5s;
+  position: relative;
+  right: 30px;
+  background-color: #1077b6;
+  color: white;
+  border-color: white;
+}
+.submit-input a button:hover {
+  background-color: white;
+  color: black;
+  border-color: #1077b6;
+}
+.submit-input a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@keyframes btn {
+  0% {
+    transform: translateX(-340px);
+    opacity: 1;
+  }
+}
+@keyframes reg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
