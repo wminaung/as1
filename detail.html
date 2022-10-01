@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Item Detail</title>
+    <link rel="icon" type="image/x-icon" href="/image/groceries.png" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      footer {
+        position: absolute;
+        bottom: 0;
+      }
+      .detail-container {
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .d-img {
+        border: 3px solid black;
+        border-radius: 10px;
+        margin-top: 10px;
+      }
+      .d-detail {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 750px;
+        color: white;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="all-bg"></div>
+    <div id="container">
+      <header>
+        <h1>Item Details</h1>
+      </header>
+      <nav>
+        <div class="icon-holder">
+          <img id="icon" src="image/groceries.png" alt="photo" />
+        </div>
+        <ul>
+          <li><a class="outline" href="index.html">Home</a></li>
+          <li><a class="outline outlineActive" href="#">Details</a></li>
+          <li><a class="outline" href="#">Help</a></li>
+          <li><a class="outline" href="login.html">Logout</a></li>
+        </ul>
+      </nav>
+
+      <div class="detail-container">
+        <div>
+          <img class="d-img" src="image/pen.jpg" width="300" alt="" />
+        </div>
+
+        <div>
+          <div class="d-detail">
+            <div>Item Name : Pen</div>
+            <br />
+
+            <div>Item Price : 800$</div>
+            <br />
+            <div>Item Model : 3A-93B</div>
+            <br />
+            <div>Color : Blue</div>
+            <br />
+            <span>Desc :</span>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+              rerum et, ut aliquid doloribus eaque ex, cupiditate sit labore qui
+              incidunt corrupti esse. Impedit quibusdam, laborum fugit dolore
+              eaque voluptate.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <footer>Copyright@2020</footer>
+    </div>
+  </body>
+</html>

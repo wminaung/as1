@@ -5,7 +5,6 @@
 
 body {
   background-color: #e7e7e9;
-
   background-image: linear-gradient(
       30deg,
       #0b0b0d 12%,
@@ -60,12 +59,28 @@ body {
 
 #container {
   margin: 0 auto;
-  width: 1024px;
+  /* max-width: 1024px; */
+  max-width: 1124px;
   min-height: 100vh;
   background-color: #0077b6;
+
   position: relative;
 }
+#all-bg {
+  position: fixed;
+  background-color: #18191ac7;
 
+  opacity: 0.8;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+/*********************** content ***********************/
+
+.content {
+  padding: 8px;
+  display: flex;
+}
 /*********************** header ***********************/
 
 header {
@@ -74,6 +89,41 @@ header {
   background-image: radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
   background-size: 10px 10px;
   text-align: center;
+}
+/*********************** aside ***********************/
+aside {
+  padding: 0;
+  margin: 0;
+  width: 300px;
+  background-color: rgb(128, 28, 148);
+}
+.category {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.category li {
+  text-align: center;
+  width: 100%;
+  margin: 5px 0px;
+}
+
+.category li a {
+  border-bottom: 1px solid #0077b6;
+  width: 100%;
+  height: 100%;
+  padding: 5px 0px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  user-select: none;
+}
+
+.category li a:hover {
+  background-color: #0077b6;
 }
 
 /*********************** nav ***********************/
@@ -118,7 +168,77 @@ nav ul {
   color: #00b4d8;
 }
 
+.icon-holder {
+  perspective: 70px;
+}
+.icon-holder:hover {
+  transform: rotate(45deg);
+  cursor: no-drop;
+}
+#icon {
+  /* transform: rotateX(90deg); */
+  animation: shade 5s ease-in-out infinite;
+}
+
+@keyframes shade {
+  0% {
+    transform: rotateY(180deg);
+  }
+  25% {
+    transform: rotateY(-180deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  75% {
+    transform: rotateY(-180deg);
+  }
+  100% {
+    transform: rotateY(180deg);
+  }
+}
+
 /*********************** section ***********************/
+
+table {
+  background-color: #00b4d8;
+  background-color: #202124;
+  border-collapse: collapse;
+}
+
+td {
+  border: 3px solid rgb(231, 220, 220);
+}
+h5 {
+  color: white;
+  text-shadow: 1px 1px 3px #000;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  opacity: 1;
+}
+.img-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.img {
+  width: 80%;
+  border-radius: 10px;
+  border: 3px solid white;
+  opacity: 0.9;
+  transition: all 0.3s linear;
+}
+.img-container:hover .img {
+  transform: scale(1.1);
+  opacity: 1;
+  z-index: 98;
+}
+
+.img-container:active .img {
+  opacity: 0.8;
+}
 
 /*********************** footer ***********************/
 footer {
@@ -126,9 +246,12 @@ footer {
   color: #e5e5f7;
   text-align: center;
   font-weight: bold;
-
+  height: 40px;
+  line-height: 40px;
   position: absolute;
   width: 100%;
-  left: 0px;
-  bottom: 0px;
+  bottom: calc(100% -100%);
+}
+.outlineActive {
+  border-bottom: 5px solid #caf0f8;
 }
