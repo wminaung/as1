@@ -48,9 +48,8 @@ form {
   left: 370px;
   border-radius: 8px;
   opacity: 1;
-  transition: all;
 
-  animation: btn 1.5s ease;
+  animation: btn 0.5s ease;
 }
 .submit-input input:hover {
   background-color: #1077b6;

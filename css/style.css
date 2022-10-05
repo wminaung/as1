@@ -1,6 +1,7 @@
 * {
   padding: 0px;
   margin: 0px;
+  box-sizing: border-box;
 }
 
 body {
@@ -55,11 +56,13 @@ body {
     );
   background-size: 46px 81px;
   background-position: 0 0, 0 0, 23px 40px, 23px 40px, 0 0, 23px 40px;
+  /* background-image: url("../image/s21ultra5g.jpg");
+  background-size: cover; */
+  background-attachment: fixed;
 }
 
 #container {
   margin: 0 auto;
-  /* max-width: 1024px; */
   max-width: 1124px;
   min-height: 100vh;
   background-color: #0077b6;
@@ -68,9 +71,9 @@ body {
 }
 #all-bg {
   position: fixed;
-  background-color: #18191ac7;
 
-  opacity: 0.8;
+  background-color: #18191ac7;
+  opacity: 0.6;
   top: 0;
   width: 100%;
   height: 100%;
@@ -200,18 +203,27 @@ nav ul {
 
 /*********************** section ***********************/
 
-table {
-  background-color: #00b4d8;
-  background-color: #202124;
-  border-collapse: collapse;
+.itemsContainer {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+}
+.row {
+  display: flex;
+  width: 100%;
+
+  width: 100%;
+}
+.item {
+  width: 300px;
+  background-color: #202020;
+  border: 1px solid white;
 }
 
-td {
-  border: 3px solid rgb(231, 220, 220);
-}
 h5 {
   color: white;
-  text-shadow: 1px 1px 3px #000;
+  text-shadow: 1px 1px 1px #000;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   opacity: 1;
 }
@@ -254,4 +266,37 @@ footer {
 }
 .outlineActive {
   border-bottom: 5px solid #caf0f8;
+}
+
+/*****************************/
+.popup {
+  width: 100%;
+  height: 44px;
+  background-color: rgb(255, 213, 213);
+  color: red;
+  font-weight: bold;
+  line-height: 44px;
+  position: absolute;
+  top: -44px;
+  text-align: center;
+  font-size: 18px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  transition: all 0.2s linear;
+}
+
+.add {
+  transform: translateY(44px);
+  border-radius: 0px 0px 10px 10px;
+  border: 2px solid black;
+  border-color: black red red red;
+}
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+.category {
+  position: sticky;
+  top: 80px;
 }

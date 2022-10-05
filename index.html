@@ -11,6 +11,7 @@
     <link rel="icon" type="image/x-icon" href="/image/groceries.png" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Home</title>
+    <script src="js/function.js"></script>
   </head>
 
   <body>
@@ -20,7 +21,7 @@
         <h1>Grocery Store</h1>
       </header>
 
-      <nav>
+      <nav class="nav">
         <div class="icon-holder">
           <img id="icon" src="image/groceries.png" alt="photo" />
         </div>
@@ -28,14 +29,14 @@
           <li><a class="outline outlineActive" href="index.html">Home</a></li>
           <li><a class="outline" href="#">About</a></li>
           <li><a class="outline" href="#">Help</a></li>
-          <li><a class="outline" href="login.html">Logout</a></li>
+          <li><a class="outline" style="user-select: none" onclick="logout()">Logout</a></li>
         </ul>
       </nav>
 
       <section>
         <!-- <h2>Products</h2> -->
         <div class="content">
-          <aside style="color: white">
+          <aside class="aside" style="color: white">
             <p
               style="
                 font-size: 20px;
@@ -57,63 +58,53 @@
               <li><a href="#">Other</a></li>
             </ul>
           </aside>
-          <table>
-            <tr>
-              <td>
+          <div class="itemsContainer">
+            <!-- <div class="row">
+              <div class="item">
+                <a href="detail.html" class="img-container">
+                  <h5 style="text-align: center">camera1</h5>
+                  <img class="img" src="image/camera.jpg" alt="camera" />
+                </a>
+              </div>
+              <div class="item">
+                <a href="detail.html" class="img-container">
+                  <h5 style="text-align: center">camer2a</h5>
+                  <img class="img" src="image/camera.jpg" alt="camera" />
+                </a>
+              </div>
+              <div class="item">
+                <a href="detail.html" class="img-container">
+                  <h5 style="text-align: center">camer3a</h5>
+                  <img class="img" src="image/camera.jpg" alt="camera" />
+                </a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="item">
                 <a href="detail.html" class="img-container">
                   <h5 style="text-align: center">camera</h5>
                   <img class="img" src="image/camera.jpg" alt="camera" />
                 </a>
-              </td>
-              <td>
+              </div>
+              <div class="item">
                 <a href="detail.html" class="img-container">
-                  <h5 style="text-align: center">shirt</h5>
-                  <img class="img" src="image/shirt.jpg" alt="shirt" />
+                  <h5 style="text-align: center">camera</h5>
+                  <img class="img" src="image/camera.jpg" alt="camera" />
                 </a>
-              </td>
-              <td>
+              </div>
+              <div class="item">
                 <a href="detail.html" class="img-container">
-                  <h5 style="text-align: center">S21 Ultra 5G</h5>
-                  <img
-                    class="img"
-                    src="image/s21ultra5g.jpg"
-                    alt="s21ultra5g"
-                  />
+                  <h5 style="text-align: center">camera</h5>
+                  <img class="img" src="image/camera.jpg" alt="camera" />
                 </a>
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                <a href="detail.html" class="img-container">
-                  <h5 style="text-align: center">Nikon Camera</h5>
-                  <img
-                    class="img"
-                    src="image/nikonCamera.jpg"
-                    alt="nikonCamera"
-                  />
-                </a>
-              </td>
-
-              <td>
-                <a href="detail.html" class="img-container">
-                  <h5 style="text-align: center">Sneaker</h5>
-                  <img class="img" src="image/sneaker.jpg" alt="sneaker" />
-                </a>
-              </td>
-
-              <td>
-                <a href="detail.html" class="img-container">
-                  <h5 style="text-align: center">Pen</h5>
-                  <img class="img" src="image/pen.jpg" alt="pen" />
-                </a>
-              </td>
-            </tr>
-          </table>
+              </div>
+            </div> -->
+            
         </div>
       </section>
 
       <footer>Copyright@2020</footer>
+      <script src="js/script.js"></script>
     </div>
   </body>
 </html>
