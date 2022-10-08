@@ -1,5 +1,7 @@
 const itemsContainer = document.querySelector(".itemsContainer");
 
+const items = JSON.parse(localStorage.getItem("items"));
+
 for (let i = 0; i < items.length; i++) {
   const row = document.createElement("div");
   row.classList.add("row");
@@ -27,3 +29,12 @@ for (let i = 0; i < items.length; i++) {
   }
   itemsContainer.append(row);
 }
+
+const catSideBar = document.querySelectorAll(".cat-sideBar");
+
+catSideBar.forEach((cat) => {
+  cat.addEventListener("click", (e) => {
+    e.preventDefault();
+    alert("Opp!! Nothing Happen.");
+  });
+});

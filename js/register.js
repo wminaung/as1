@@ -35,6 +35,7 @@ form.addEventListener("submit", (e) => {
     popup.classList.add("add");
     return;
   } else {
+    // if valid
     if (localStorage.getItem("user") != null) {
       data.push(userData);
       localStorage.setItem(`user`, JSON.stringify(data));
@@ -43,7 +44,6 @@ form.addEventListener("submit", (e) => {
       window.location.href = "login.html";
     } else {
       let data = new Array();
-
       data.push(userData);
       localStorage.setItem(`user`, JSON.stringify(data));
 

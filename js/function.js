@@ -1,11 +1,11 @@
-let isLogin = sessionStorage.getItem("isLogin") === "true" ? true : false;
-console.log(isLogin);
+import Cookier from "./../myLib/Cookier.js";
+const cookie = new Cookier();
 
-if (!isLogin) {
+if (!cookie.hasCookieKey("user_id")) {
+  alert("you need to login first");
   location.href = "login.html";
-} else {
-  console.log("you are login");
 }
+
 const items = [
   [
     {
@@ -15,7 +15,7 @@ const items = [
       model: "1A",
       price: "300",
       color: "White/Black",
-      desc: "This is a Camera And You can Catch the image of what you want",
+      desc: "This is a Camera And You can Catch the image of what you want Lorem ipsum dolor sit amet, consectetur adipisicing elit.Necessitatibus voluptatem, unde culpa optio in laboriosam inventore debitis esse sequi officia quibusdam ex incidunt omnisquis, odit enim tempore praesentium et.",
     },
     {
       id: 2,
@@ -24,7 +24,7 @@ const items = [
       model: "1A",
       price: "400",
       color: "Blue/Black",
-      desc: "This is a Camera And You can Catch the image of what you want",
+      desc: "This is a Shirt that you can wear Lorem ipsum dolor sit amet, consectetur adipisicing elit.Necessitatibus voluptatem, unde culpa optio in laboriosam inventore debitis esse sequi officia quibusdam ex incidunt omnisquis, odit enim tempore praesentium et.",
     },
     {
       id: 3,
@@ -33,7 +33,7 @@ const items = [
       model: "1A",
       price: "300",
       color: "White/Black",
-      desc: "This is a Camera And You can Catch the image of what you want",
+      desc: "This is a phone Lorem ipsum dolor sit amet, consectetur adipisicing elit.Necessitatibus voluptatem, unde culpa optio in laboriosam inventore debitis esse sequi officia quibusdam ex incidunt omnisquis, odit enim tempore praesentium et.",
     },
   ],
   [
@@ -44,7 +44,7 @@ const items = [
       model: "1A",
       price: "1003",
       color: "Black",
-      desc: "This is a Camera And You can Catch the image of what you want",
+      desc: "This is a Camera Lorem ipsum dolor sit amet, consectetur adipisicing elit.Necessitatibus voluptatem, unde culpa optio in laboriosam inventore debitis esse sequi officia quibusdam ex incidunt omnisquis, odit enim tempore praesentium et.",
     },
     {
       id: 5,
@@ -53,7 +53,7 @@ const items = [
       model: "1A",
       price: "300",
       color: "White/Red",
-      desc: "This is a Camera And You can Catch the image of what you want",
+      desc: "This is a Sneaker Lorem ipsum dolor sit amet, consectetur adipisicing elit.Necessitatibus voluptatem, unde culpa optio in laboriosam inventore debitis esse sequi officia quibusdam ex incidunt omnisquis, odit enim tempore praesentium et.",
     },
     {
       id: 6,
@@ -62,21 +62,19 @@ const items = [
       model: "1A",
       price: "1000",
       color: "White/Black",
-      desc: "This is a Camera And You can Catch the image of what you want",
+      desc: "This is pen Lorem ipsum dolor sit amet, consectetur adipisicing elit.Necessitatibus voluptatem, unde culpa optio in laboriosam inventore debitis esse sequi officia quibusdam ex incidunt omnisquis, odit enim tempore praesentium et.",
     },
   ],
 ];
 
-// if (localStorage.getItem("items") == null) {
-//   localStorage.setItem("items", JSON.stringify(items));
-// }
-
 localStorage.setItem("items", JSON.stringify(items));
 
-function logout() {
-  let logout = window.confirm("Are you Sure You want to Logout?");
-  if (logout) {
-    sessionStorage.setItem("isLogin", "false");
-    window.location.href = "index.html";
+const logoutTag = document.querySelector(".logout");
+
+logoutTag.addEventListener("click", () => {
+  const isLogout = confirm("Are you sure Want to Logout");
+  if (isLogout) {
+    cookie.deleteCookie("user_id", "/");
+    window.location.href = "login.html";
   }
-}
+});

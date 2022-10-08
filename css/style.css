@@ -238,10 +238,25 @@ h5 {
 .img {
   width: 80%;
   border-radius: 10px;
-  border: 3px solid white;
+  border: 3px solid rgb(226, 226, 224);
   opacity: 0.9;
   transition: all 0.3s linear;
+  animation: little 0.5s ease-out;
 }
+
+@keyframes little {
+  0% {
+    transform: translateY(-800px);
+  }
+  70% {
+    transform: translateY(50px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 .img-container:hover .img {
   transform: scale(1.1);
   opacity: 1;
@@ -260,12 +275,14 @@ footer {
   font-weight: bold;
   height: 40px;
   line-height: 40px;
-  position: absolute;
   width: 100%;
-  bottom: calc(100% -100%);
+  margin-top: 100px;
 }
-.outlineActive {
-  border-bottom: 5px solid #caf0f8;
+.colorActive {
+  color: #b7cfea;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bolder;
+  font-size: 20px;
 }
 
 /*****************************/
@@ -299,4 +316,5 @@ footer {
 .category {
   position: sticky;
   top: 80px;
+  font-family: "Courier New", Courier, monospace;
 }

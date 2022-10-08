@@ -1,3 +1,17 @@
+import Cookier from "./../myLib/Cookier.js";
+
+const login = () => {
+  alert("you are successfully Login!");
+  const date = new Date();
+  const cookie = new Cookier();
+  const key = "user_id";
+  const value = "true";
+
+  cookie.setCookie(key, value, date, 1, "/");
+
+  window.location.href = "./index.html";
+};
+
 const nameTag = document.getElementById("name");
 const emailTag = document.getElementById("email");
 const passwordTag = document.getElementById("password");
@@ -9,7 +23,6 @@ form.addEventListener("submit", (e) => {
   const name = nameTag.value;
   const email = emailTag.value;
   const password = passwordTag.value;
-
   const user = JSON.parse(localStorage.getItem("user"));
 
   user.forEach((usr) => {
@@ -18,12 +31,6 @@ form.addEventListener("submit", (e) => {
       let variable = "";
       let a = 0;
 
-      // if (name == "") {
-      // }
-      // if (email == "") {
-      // }
-      // if (password == "") {
-      // }
       if (name != usr.name) {
         variable += `name, `;
         a++;
@@ -46,9 +53,7 @@ form.addEventListener("submit", (e) => {
       popup.textContent = `${variable}`;
       popup.classList.add("add");
     } else {
-      alert("you are successfully Login!");
-      sessionStorage.setItem("isLogin", "true");
-      window.location.href = "index.html";
+      login();
     }
   });
 

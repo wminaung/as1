@@ -9,10 +9,6 @@
     <link rel="stylesheet" href="css/style.css" />
 
     <style>
-      footer {
-        position: absolute;
-        bottom: 0;
-      }
       .detail-container {
         display: flex;
         justify-content: space-evenly;
@@ -37,7 +33,24 @@
 
         height: 40px;
       }
+      .buy-btn {
+        width: 100px;
+        height: 30px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      .buy-btn:active {
+        background-color: rgb(241, 203, 132);
+        color: white;
+      }
     </style>
+
+    <script>
+      function buyBtn() {
+        alert("Opp! You can't buy.");
+      }
+    </script>
   </head>
 
   <body>
@@ -51,9 +64,10 @@
           <img id="icon" src="image/groceries.png" alt="photo" />
         </div>
         <ul>
-          <li><a class="outline" href="index.html">Home</a></li>
-          <li><a class="outline outlineActive" href="#">Details</a></li>
-          <li><a class="outline" href="#">Help</a></li>
+          <li><a class="outline" href="/index.html">Home</a></li>
+          <li><a class="outline" href="/about.html">Home</a></li>
+          <li><a class="outline colorActive">Details</a></li>
+          <li><a class="outline" href="/help.html">Help</a></li>
           <li><a class="outline" href="login.html">Logout</a></li>
         </ul>
       </nav>
@@ -67,41 +81,39 @@
           <div class="d-detail">
             <div class="d-flex">
               <div>Item Name :</div>
-              <div class="item-name">Pen</div>
+              <div class="item-name">Demo</div>
             </div>
             <hr />
             <br />
             <div class="d-flex">
               <div>Item Price :</div>
-              <div class="item-price">800$</div>
+              <div class="item-price">0$</div>
             </div>
             <hr />
             <br />
             <div class="d-flex">
               <div>Item Model :</div>
-              <div class="item-model">3A-93B</div>
+              <div class="item-model">3A-Demo</div>
             </div>
             <hr />
             <br />
             <div class="d-flex">
               <div>Color :</div>
-              <div class="item-color">Blue</div>
+              <div class="item-color">Demo</div>
             </div>
             <hr />
             <br />
             <span>Desc :</span>
-            <p class="item-desc">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-              rerum et, ut aliquid doloribus eaque ex, cupiditate sit labore qui
-              incidunt corrupti esse. Impedit quibusdam, laborum fugit dolore
-              eaque voluptate.
-            </p>
+            <p class="item-desc">This is Demo</p>
           </div>
         </div>
       </div>
-
+      <div style="width: 100%; text-align: center; margin-top: 30px">
+        <button class="buy-btn" onclick="buyBtn()">BUY</button>
+      </div>
       <footer>Copyright@2020</footer>
-      <script src="js/detail.js"></script>
+      <script src="./js/detail.js"></script>
+      <script src="./js/location.js"></script>
     </div>
   </body>
 </html>
